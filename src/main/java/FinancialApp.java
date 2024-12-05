@@ -439,13 +439,13 @@ public class FinancialApp {
 
         Session session = Session.getInstance(properties, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("f34995975@gmail.com", "hcll mvld icgh xazg");
+                return new PasswordAuthentication("your-email@gmail.com", "your-password");
             }
         });
 
         try {
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("f34995975@gmail.com"));
+            message.setFrom(new InternetAddress("your-email@gmail.com"));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
             message.setSubject(subject);
 
