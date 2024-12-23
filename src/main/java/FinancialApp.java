@@ -476,6 +476,29 @@ public class FinancialApp {
         }
     }
 
+    public void addTransaction(Map<String, String> transaction) {
+     transactions.add(transaction);
+        saveTransactions();
+        refreshTable();
+        updateSummary();
+    }
+
+    public List<Map<String, String>> getTransactions() {
+        return transactions;
+    }
+
+    public String getIncomeLabelText() {
+        return incomeLabel.getText();
+    }
+
+    public String getExpenseLabelText() {
+        return expenseLabel.getText();
+    }
+
+    public String getBalanceLabelText() {
+        return balanceLabel.getText();
+    }
+
     /**
      * Metode utama untuk meluncurkan FinancialApp.
      *
